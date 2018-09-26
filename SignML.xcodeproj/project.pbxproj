@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		35F3AF47215AFCB500F630A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AF46215AFCB500F630A4 /* AppDelegate.swift */; };
-		35F3AF49215AFCB500F630A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AF48215AFCB500F630A4 /* ViewController.swift */; };
-		35F3AF4C215AFCB500F630A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F3AF4A215AFCB500F630A4 /* Main.storyboard */; };
 		35F3AF4E215AFCB700F630A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F3AF4D215AFCB700F630A4 /* Assets.xcassets */; };
 		35F3AF51215AFCB700F630A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F3AF4F215AFCB700F630A4 /* LaunchScreen.storyboard */; };
+		35F3AF59215AFD5000F630A4 /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AF58215AFD4F00F630A4 /* ImageClassificationViewController.swift */; };
+		35F3AF5E215AFD6E00F630A4 /* signnames.csv in Resources */ = {isa = PBXBuildFile; fileRef = 35F3AF5C215AFD6D00F630A4 /* signnames.csv */; };
+		35F3AF5F215AFD6E00F630A4 /* model_squeezeNet_TSR.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AF5D215AFD6E00F630A4 /* model_squeezeNet_TSR.mlmodel */; };
+		35F3AF61215AFD8B00F630A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F3AF60215AFD8B00F630A4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35F3AF43215AFCB500F630A4 /* SignML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F3AF46215AFCB500F630A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35F3AF48215AFCB500F630A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35F3AF4B215AFCB500F630A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35F3AF4D215AFCB700F630A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F3AF50215AFCB700F630A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F3AF52215AFCB700F630A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F3AF58215AFD4F00F630A4 /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
+		35F3AF5C215AFD6D00F630A4 /* signnames.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = signnames.csv; sourceTree = "<group>"; };
+		35F3AF5D215AFD6E00F630A4 /* model_squeezeNet_TSR.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model_squeezeNet_TSR.mlmodel; sourceTree = "<group>"; };
+		35F3AF60215AFD8B00F630A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				35F3AF46215AFCB500F630A4 /* AppDelegate.swift */,
-				35F3AF48215AFCB500F630A4 /* ViewController.swift */,
-				35F3AF4A215AFCB500F630A4 /* Main.storyboard */,
+				35F3AF58215AFD4F00F630A4 /* ImageClassificationViewController.swift */,
+				35F3AF5D215AFD6E00F630A4 /* model_squeezeNet_TSR.mlmodel */,
+				35F3AF5C215AFD6D00F630A4 /* signnames.csv */,
+				35F3AF60215AFD8B00F630A4 /* Main.storyboard */,
 				35F3AF4D215AFCB700F630A4 /* Assets.xcassets */,
 				35F3AF4F215AFCB700F630A4 /* LaunchScreen.storyboard */,
 				35F3AF52215AFCB700F630A4 /* Info.plist */,
@@ -122,9 +128,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F3AF5E215AFD6E00F630A4 /* signnames.csv in Resources */,
 				35F3AF51215AFCB700F630A4 /* LaunchScreen.storyboard in Resources */,
 				35F3AF4E215AFCB700F630A4 /* Assets.xcassets in Resources */,
-				35F3AF4C215AFCB500F630A4 /* Main.storyboard in Resources */,
+				35F3AF61215AFD8B00F630A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +142,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F3AF49215AFCB500F630A4 /* ViewController.swift in Sources */,
+				35F3AF5F215AFD6E00F630A4 /* model_squeezeNet_TSR.mlmodel in Sources */,
 				35F3AF47215AFCB500F630A4 /* AppDelegate.swift in Sources */,
+				35F3AF59215AFD5000F630A4 /* ImageClassificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		35F3AF4A215AFCB500F630A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35F3AF4B215AFCB500F630A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35F3AF4F215AFCB700F630A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
